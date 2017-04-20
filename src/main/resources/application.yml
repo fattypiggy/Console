@@ -1,0 +1,20 @@
+spring: 
+  application: 
+    name: console-service
+server:
+  host: localhost
+  port: 7788
+  
+eureka: 
+  client: 
+    serviceUrl:
+#      defaultZone: http://user:password123@localhost:6677/eureka/
+       defaultZone: http://localhost:6677/eureka/
+    healthcheck:
+      enable: true
+    
+  instance: 
+#    prefer-ip-address: true
+#    instanceId: ${spring.application.name}:${server.port}
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
